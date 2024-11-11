@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./Research.scss";
+import "./Movies.scss";
 
 interface Movie {
   _id: string;
   name: string;
 }
 
-const Research: React.FC = () => {
+const Movies: React.FC = () => {
   const [movieResearch, setMovieResearch] = useState("");
   const [user, setUser] = useState("");
   const [movies, setMovies] = useState<Movie[]>([]);
@@ -74,4 +74,4 @@ const Research: React.FC = () => {
   );
 };
 
-export default Research;
+export default Movies;

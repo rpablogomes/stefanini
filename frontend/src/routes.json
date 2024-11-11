@@ -1,0 +1,10 @@
+[
+    {
+        "path": "/movies",
+        "page": "Movies"
+    },
+    {
+        "path": "/logs",
+        "page": "Logs"
+    }
+]

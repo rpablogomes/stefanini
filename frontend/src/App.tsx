@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Research from "./Research/Research";
-import Logs from "./Logs/Logs";
-import Header from "./Header/Header";
+import Header from "./components/Header/Header";
+import routes from "./routes.json";
 
 const App: React.FC = () => {
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path="/movies" Component={Research} />
-        <Route path="logs" Component={() => <Logs />} />
+        {routes.map((route, index) => {
+          const Page = require(`./pages/${route.page}/${route.page}`).default;
+          return <Route key={index} path={route.path} Component={Page} />;
+        })}
       </Routes>
     </Router>
   );
